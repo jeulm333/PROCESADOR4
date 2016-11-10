@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 10 10:59:45 2016
+Mapped Date    : Thu Nov 10 12:39:47 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -36,8 +36,8 @@ Logic Distribution:
 Average Fanout of Non-Clock Nets:                3.51
 
 Peak Memory Usage:  253 MB
-Total REAL time to MAP completion:  8 secs 
-Total CPU time to MAP completion:   3 secs 
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
