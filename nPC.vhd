@@ -39,23 +39,16 @@ end nPC;
 architecture Behavioral of nPC is
 
 begin
-   process(clk,rst,direccion)
+   process (clk,reset,senal)
 	begin
-	
-   if rst='1' then
-      direccionSalida <= (others =>'0');
-   else
-		if (rising_edge(clk))then
-			direccionSalida <= direccion;
-   
+	if(rising_edge(clk))then
+			if reset='1' then
+			salida<=x"00000000";
+		else
+		salida <=senal;		
 		end if;
 	end if;
-	
-	end process;
-	
-	
-
-
+end process;
 
 end Behavioral;
 
