@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/usuario pc/Desktop/UNI/fotos/procesador/memoriaInstrucciones_isim_beh.exe" -prj "C:/Users/usuario pc/Desktop/UNI/fotos/procesador/memoriaInstrucciones_beh.prj" "work.memoriaInstrucciones" 
