@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/usuario pc/Desktop/UNI/fotos/procesador/memoriaInstrucciones_isim_beh.exe" -prj "C:/Users/usuario pc/Desktop/UNI/fotos/procesador/memoriaInstrucciones_beh.prj" "work.memoriaInstrucciones" 
+-intstyle "ise" -incremental -o "E:/PROCESADOR 4/PROCESADOR4/Tb_procesadorIntento_isim_beh.exe" -prj "E:/PROCESADOR 4/PROCESADOR4/Tb_procesadorIntento_beh.prj" "work.Tb_procesadorIntento" 

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    18:04:51 11/05/2016 
+-- Create Date:    18:05:33 11/05/2016 
 -- Design Name: 
--- Module Name:    mux - Behavioral 
+-- Module Name:    seu - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,28 +29,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mUX is
-    Port ( inmediato : in  STD_LOGIC;
-           datoSeu : in  STD_LOGIC_VECTOR (31 downto 0);
-           rfuente2 : in  STD_LOGIC_VECTOR (31 downto 0);
+entity sEU is
+    Port ( i13bits : in  STD_LOGIC_VECTOR (12 downto 0);
            salida : out  STD_LOGIC_VECTOR (31 downto 0));
-end mUX;
+end sEU;
 
-architecture Behavioral of mUX is
+architecture Behavioral of sEU is
 
 begin
-process(inmediato,datoSeu,rfuente2)
+process(i13bits)
 begin
-			if(inmediato='1')then ---- Indicando que si mi variable inmediato es un '1'
-					salida<= datoSeu; -- Deja pasar el Inmediato  de 13 bits que proviene del modulo sEU 
 
-					
-			else 
-			if(inmediato='0')then -- Indicando que la variable inmediato es un '0' 
-					salida<= rfuente2; -- Deje pasar la variable salida que hace referencia a la varible resgistros2 de el modulo rF
-			end if ; 
+if(i13bits(12) = '1')then--Verifica si es numero ingresado es negativo
+	salida(12 downto 0) <= i13bits;
+	salida(31 downto 13) <= (others=>'1');--Complementa el numero con unos por ser negativo
 
-	end if; 	
+else
+	salida(12 downto 0) <= i13bits;
+	salida(31 downto 13) <= (others=>'0');--Complementa el numero con ceros por no ser numero negativo
+
+end if;
 
 end process; 
 
